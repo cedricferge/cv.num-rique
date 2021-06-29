@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,86 +8,248 @@
     list-style: none;
 }
 
-body{
+a {
+    color:#fff
+}
+
+body {
     background-color: #444;
     font-size: 14px;
     line-height: 22px;
     color: #fff;
 }
 
-.bold{
+.bold {
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.semi_bold{
+.semi_bold {
     font-size: 16px;
     font-weight: 600;
 }
 
-.cv{
+.cv {
     width: 800px;
     height: auto;
     display: flex;
     margin: 50px auto;
 }
 
-.cv .cv_gauche{
+.cv .cv_gauche {
     width: 280px;
     background-color: #f60091;
 }
 
 
-.cv .cv_gauche.cv_profil{
+.cv .cv_gauche.cv_profil {
     width: 100%;
     height: 280px;
 }
 
-.cv .cv_gauche.cv_profil img{
+.cv .cv_gauche.cv_profil img {
     width: 100%;
     border-radius: 120px;
-    margin-top: 1,6rem;
+    margin-top: 1, 6rem;
 }
 
-.cv .cv_gauche .cv_contenu{
+.cv .cv_gauche .cv_contenu {
     padding: 0 25px;
     padding-top: 10px;
 }
 
-.cv .titre{
+.cv .titre {
     margin: 20px 0;
 }
 
-.cv .bold{
-    color:aqua;
-}
-
-.cv .semi_bold{
+.cv .bold {
     color: aqua;
-    opacity: 0,6;
 }
 
-.cv .cv_article{
+.cv .semi_bold {
+    color: aqua;
+    opacity: 0, 6;
+}
+
+.cv .cv_article {
     padding: 20px 0;
     border-bottom: 2px solid #fff;
 }
-    
 
-    
-
-
-
-    
-    
+.cv .cv_article:last-child {
+    border: 0px;
+}
 
 
 
+.cv .cv_gauche ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cv .cv_gauche ul li:last-child {
+    margin-bottom: 0px;
+}
+
+.cv .cv_gauche ul li .icon {
+    width: 35px;
+    height: 35px;
+    color: #f60091;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 16px;
+    position: relative;
+}
+.cv .cv_droit .cv_loisir ul li i,
+.cv .icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.cv .cv_gauche .cv_compétence ul li {
+    justify-content: space-between;
+}
+
+.cv .cv_gauche .cv_compétence .cv_compétence_progress span {
+    content: "";
+    background-color: #fff;
+    height: 20px;
+
+}
+
+.cv .cv_gauche .cv_compétence ul li .nom_compétence {
+    width: 25%;
+}
+
+.cv .cv_gauche .cv_compétence ul li .compétence_progress {
+    width: 60px;
+    margin: 0 5px;
+    height: 5px;
+    background-color: #fff;
+    position: relative;
+}
+
+.cv .cv_gauche .cv_compétence ul li .compétence_progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(2, 100, 100);
+    opacity: 0, 7;
+}
+
+.cv .cv_gauche .cv_compétence ul li .compétence_pourcentage {
+    width: 15%;
+}
+
+.cv .cv_droit {
+    width: 520px;
+    background: aqua;
+    color: #444;
+    padding: 25px;
+}
+
+
+.cv .cv_droit .bold {
+    color: #f60091;
+}
+
+.cv .cv_droit .cv_travail ul,
+.cv .cv_droit .cv_formation ul {
+    padding-left:  40px;
+    overflow: hidden;
+
+
+}
+
+.cv .cv_droit ul li{
+    position:relative
+}
+
+.cv .cv_droit ul li .date{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15;
+
+
+}
+
+.cv .cv_droit ul li .info{
+    margin-bottom: 15px;
+
+}
+
+.cv .cv_droit ul li:last-child .info{
+    margin: bottom 0;
+}
+
+.cv .cv_droit .cv_travail ul li::before,
+.cv .cv_droit .cv_formation ul li::before{
+    content:"";
+    position: absolute;
+    top: 5px;
+    left: -25px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 3px solid #f60091
 
 
 
+}
+
+.cv .cv_droit .cv_travail ul li::after,
+.cv .cv_droit .cv_formation ul li::after{
+    content:"";
+    position: absolute;
+    top: 14px;
+    left: -21px;
+    width: 3px;
+    height: 133px;
+    background: #f60091;
 
 
-    
+}
 
+.cv .cv_droit .cv_loisir ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cv .cv_droit .cv_loisir ul li{
+    width: 80px;
+    height: 80px;
+    border: 2px solid #f60091;
+    border-radius: 50%;
+    background:#fff ;
+    color: #f60091;
+
+
+
+}
+
+.cv .cv_droit .cv_loisir ul li i{
+    font-size: 30px;
+
+}
+
+.cv .cv_droit .cv_loisir ul li::before{
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: -52px;
+    width: 50px;
+    height: 2px;
+    background:#f60091 ;
+
+}
+
+.cv .cv_droit .cv_loisir ul li:last-child::before{
+    visibility:hidden ;
+}
 
